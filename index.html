@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project 2</title>
+    <link rel="stylesheet" type="text/css" href="style-parallel.css" />
+</head>
+<body>
+<div id="header">
+    <h1>Project 2</h1>
+    <h style="font-weight: bold"><tr>DH2321 Information Visualization</tr></h>
+    <h style="margin-left: 20px">Hannes Bennet</h>
+    <h style="margin-left: 100px">Reference: <a href="http://www.worldvaluessurvey.org/WVSNewsShow.jsp?ID=367">World Values Survey</a></h>
+
+    <div class="controls">
+        <strong id="rendered-count"></strong>/<strong id="selected-count"></strong><!--<strong id="data-count"></strong>-->
+        <div class="fillbar"><div id="selected-bar"><div id="rendered-bar">&nbsp;</div></div></div>
+        Lines of country instances with <strong id="opacity"></strong> opacity. <!--vill ha?-->
+        <span class="settings">
+        <button id="hide-ticks">Hide Ticks</button>
+        <button id="show-ticks" disabled="disabled">Show Ticks</button>
+        <button id="dark-theme">Dark</button>
+        <button id="light-theme" disabled="disabled">Light</button>
+      </span>
+    </div>
+</div>
+<div id="chart">
+    <canvas id="background"></canvas>
+    <canvas id="foreground"></canvas>
+    <canvas id="highlight"></canvas>
+    <svg></svg>
+</div>
+<div id="wrap">
+    <div  class="contentBox">
+        <h3 title=" Culture zone scheme, attributing each country to one of ten distinct culture
+        zones created on the basis of religious traditions, imperial/colonial legacies and ethnolinguistic composition.">Culture Zones</h3>
+        <p id="legend"> //
+        </p>
+    </div>
+    <div class="contentBox">
+        <h3>Sample of 25 entries <input type="text" id="search" placeholder="Search Country..."/></h3>
+        <p id="country-list">
+        </p>
+    </div>
+    <div class ="contentBox">
+            <p style="font-weight: bold;">Variables (hover over for info)</p>
+            <li title=" 3-item index measuring a national culture’s emphasis on universal freedoms in the domain of reproductive choices (acceptance of divorce, abortion, homosexuality).">Choice Component of Emancipative Values [EV_choice]</li>
+            <li title=" 3-item index measuring a national culture’s emphasis on universal freedoms in the domain of people’s voice (priorities for freedom of speech and people’s say in national and local affairs).">Voice Component of Emancipative Values [EV_voice]</li>
+            <li title=" 10-point item indicating to what extent people are satisfied with their financial household situation.">Financial Satisfaction [FinSat]</li>
+            <li title=" 4-point item indicating to what extent people think that they are healthy.">Perceived Health [PerHea]</li>
+            <li title=" 10-point item indicating to what extent people believe to have control and free choice over their lives.">Perceived Choice [PerCho]</li>
+            <li title=" 4-point item indicating to what extent people fell happy.">Happy</li>
+            <li title=" 10-point item indicating to what extent people are satisfied with their life as a whole.">Life Satisfaction [LifSat]</li>
+            <li title=" Dummy item indicating whether or not people are willing to fight for their country in the case of war.">Willingness to Fight [WilFig]</li>
+    </div>
+</div>
+
+</body>
+<script src="https://mbostock.github.com/d3/d3.v2.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+<script src="App.js"></script>
+</html>
