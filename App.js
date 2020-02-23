@@ -616,7 +616,7 @@ window.onresize = function() {
     xscale = d3.scale.ordinal().rangePoints([0, w], 1).domain(dimensions);
     dimensions.forEach(function(d) {
         yscale[d].range([h, 0]);
-    }).sort();
+    });
 
     d3.selectAll(".dimension")
         .attr("transform", function(d) { return "translate(" + xscale(d) + ")"; })
