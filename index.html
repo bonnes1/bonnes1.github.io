@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="header">
-    <h1>Project 2</h1>
+    <h1>IVIS Project 2</h1>
     <h style="font-weight: bold"><tr>DH2321 Information Visualization</tr></h>
     <h style="margin-left: 20px">Hannes Bennet</h>
     <h style="margin-left: 100px">Reference: <a href="http://www.worldvaluessurvey.org/WVSNewsShow.jsp?ID=367">World Values Survey</a></h>
@@ -25,12 +25,20 @@
       </span>
     </div>
 </div>
+<div id="infoOver">
+    <table><td>Here is a visual mapping of various variables from “World Values survey” (WVS). You can either search for
+        countries to see how their values changes over the years, click to filter different Culture Zones or brush the different
+        variables y-axis for a desired span of the variable. It is also possible to move around the axises by moving the variable
+        titles or even remove if you wish to do that by moving it to the end of either side.</td>
+    </table>
+</div>
 <div id="chart">
     <canvas id="background"></canvas>
     <canvas id="foreground"></canvas>
     <canvas id="highlight"></canvas>
     <svg></svg>
 </div>
+
 <div id="wrap">
     <div  class="contentBox">
         <h3 title=" Culture zone scheme, attributing each country to one of ten distinct culture
@@ -55,6 +63,35 @@
             <li title=" Dummy item indicating whether or not people are willing to fight for their country in the case of war.">Willingness to Fight [WilFig]</li>
     </div>
 </div>
+<table id="infoUnder">
+    <tr><th>Discovery Process 1</th><th>Discovery Process 2</th></tr>
+    <td>
+        <p style="font-weight: bold">Values over time and comparison</p>
+        <p>By searching for different countries you can notice how different values have changed over time. By searching
+        for e.g. Sweden you can notice the values of emphasis on universal freedoms in the domain of reproductive choices (EV_choice) has drastically increased.
+            By filtering out all but "Reformed West" (somewhat central Europe) we can see a trending pattern of values that
+            are similar to each of these countries. Even more interesting, when comparing "Reformed West" with "Orthodox East" we can notice very different values in the matter
+            of emphasis in the domain of universal freedoms in both reproductive choices but also people's voice.
+        </p>
+    </td>
+    <td>
+        <p style="font-weight: bold">Overall difference in variables</p>
+        <p>By brushing a small timespan of about 5 years and comparing from the 1980s and the 2010s you can compare all
+        the different variables. One noticeable structure is how the countries from later years are more spread in their values
+        compared to earlier years. E.g. how the people consider their own health is very widespread in the 2010s
+        compared to earlier years where it seems like people from various countries would consider themselves as more healthy.
+        The reason for this could simply be because of less data points in the 1980s compared to 2010s but if you exclude that, one reason
+        of the pattern could be because of the environmental challenges that people are more aware of today compared to the 1980s.</p>
+    </td>
+</table>
+<table id ="underInfo">
+<tr><th>My Learnings</th></tr>
+    <td><p>This project have been pretty challenging to be honest. I used the d3 library of parallel coordinates from Kai who have
+        delivered very nice examples of parallel coordinates and his examples have helped a lot. I found the most difficult thing was
+        to get the data to work properly, but with a lot of searching on the internet and comparing with other similar
+        projects using parallel coordinates it worked in the end. I have also learned more about how to host severs by trying with firebase
+        but in the end using github pages. </p></td>
+</table>
 
 </body>
 <script src='https://d3js.org/d3.v2.js'></script>

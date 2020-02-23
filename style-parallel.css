@@ -191,8 +191,8 @@ button#exclude-data:hover {
     font-weight: bold;
 }
 #rendered-bar {
-    background: #888;
-    border-right: 1px solid #666;
+    background: #435073;
+    border-right: 1px solid #555555;
 }
 #selected-bar {
     background: rgba(160,160,160,0.5);
@@ -211,7 +211,7 @@ button#exclude-data:hover {
 }
 #header {
     border-bottom: 1px solid rgba(100,100,100,0.35);
-    background: #e2e2e2;
+    background: #c6c1d3;
     padding: 6px 24px 4px;
     line-height: 24px;
 }
@@ -232,6 +232,55 @@ button#exclude-data:hover {
     line-height: 24px;
 }
 
+#infoOver table {
+    box-sizing: border-box;
+    border: 1px solid gray;
+    text-align: center;
+    position: center;
+}
+#infoUnder {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    margin-top: 31%;
+    border-collapse: collapse;
+
+}
+#infoUnder th {
+    box-sizing: border-box;
+    border: 1px solid black;
+    font-size: 1.5em;
+    height: 1.3em;
+}
+#infoUnder td {
+    width: 50%;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    text-align: center;
+
+}
+#underInfo {
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    margin-top: 45%;
+    border-collapse: collapse;
+    margin-bottom: 5%;
+}
+#underInfo th {
+    font-size: 1.5em;
+    box-sizing: border-box;
+    border: 1px solid black;
+    text-align: center;
+    height: 1.3em;
+}
+
+#underInfo td {
+    box-sizing: border-box;
+    border: 1px solid gray;
+    text-align: center;
+}
 /* Scrollbars */
 
 ::-webkit-scrollbar {
