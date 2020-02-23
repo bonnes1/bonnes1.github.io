@@ -242,7 +242,7 @@ button#exclude-data:hover {
     position: absolute;
     box-sizing: border-box;
     border: 1px solid gray;
-    margin-top: 31%;
+    margin-top: 40%;
     border-collapse: collapse;
 
 }
@@ -264,7 +264,7 @@ button#exclude-data:hover {
     position: absolute;
     box-sizing: border-box;
     border: 1px solid gray;
-    margin-top: 45%;
+    margin-top: 55%;
     border-collapse: collapse;
     margin-bottom: 5%;
 }

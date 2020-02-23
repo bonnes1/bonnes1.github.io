@@ -445,25 +445,23 @@ function brush() {
         .groupBy(function(d) { return d.group; })
 
     // include empty groups
-    _(colors).each(function(v,k) { tallies[k] = tallies[k] || []; }); // alla blir []
+    _(colors).each(function(v,k) { tallies[k] = tallies[k] || []; });
 
     legend
         .style("text-decoration", function(d) { return _.contains(excluded_groups,d) ? "line-through" : null; })
         .attr("class", function(d) {
-            //console.log(tallies[d]); // = [] tallie är objekt med all data i
-            //console.log(tallies[d].length); //=0
-            return (tallies[d].length > 0) //alla blir row off
+            return (tallies[d].length > 0)
                 ? "row"
                 : "row off";
         });
 
     legend.selectAll(".color-bar")
-        .style("width", function(d) {  //alla blir 0px?? d = culZone värde ex. "Old West"
+        .style("width", function(d) {
             return Math.ceil(600*tallies[d].length/data.length) + "px"
         });
 
     legend.selectAll(".tally")
-        .text(function(d,i) { return tallies[d].length }); //då blir alla längden 0
+        .text(function(d,i) { return tallies[d].length });
 
     // Render selected lines
     paths(selected, foreground, brush_count, true);
